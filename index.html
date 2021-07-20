@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg" alt="">
+  </header>
+  
+  <main class='calc'>
+
+    <div class="input">
+
+      <label for="number">
+        <h4>Bill</h4>
+        <h4 class="amt-error error-mssg">Can't be less than Zero</h4>
+      </label>
+      <input type="number" class="amount" name='amount' min='0' placeholder="00.00">
+
+      <label for="number">
+        <h4>Select Tip %</h4>
+      </label>
+      <div class="tips">
+        <button type="number" class="tip unselected" name='tip' value=5>5%</button>
+        <button type="number" class="tip unselected" name='tip' value=10>10%</button>
+        <button type="number" class="tip unselected" name='tip' value=15>15%</button>
+        <button type="number" class="tip unselected" name='tip' value=25>25%</button>
+        <button type="number" class="tip unselected" name='tip' value=30>30%</button>
+        <input type="number" name="tip" class="custom" min="0" placeholder="Custom">
+      </div>
+
+      <label for="number">
+        <h4>Number of People</h4>
+        <h4 class="people-error error-mssg">Can't be Zero</h4>
+      </label>
+      <input type="number" class="people" name="people" value=1 min="1" placeholder="1">
+
+    </div>
+
+    <div class="result">
+
+      <div class="tip-amount">
+        <div class="text">
+          <h4>Tip Amount</h4>
+          <h5>/Person</h5>
+        </div>
+        <div class="value tip-amount-value">$0.00</div>
+      </div>
+
+      <div class="total">
+        <div class="text">
+          <h4>Total</h4>
+          <h5>/Person</h5>
+        </div>
+        <div class="value total-value">$0.00</div>
+      </div>
+
+      <button class="reset">Reset</button>      
+
+    </div>
+
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/1Mpedence" target="_blank">Harsh Anand</a>.
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
