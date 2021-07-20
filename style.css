@@ -98,6 +98,12 @@ input{
     padding: 0 1em;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .tips{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
