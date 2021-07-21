@@ -152,6 +152,7 @@ input::-webkit-inner-spin-button {
 }
 
 .custom{
+    letter-spacing: -2px;
     font-size: 1.5em;
     font-weight: 700;
     color: hsl(183, 100%, 15%);
