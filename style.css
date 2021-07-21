@@ -12,6 +12,7 @@ body{
     align-items: center;
     background-color: hsl(185, 41%, 84%);
     min-height: 100vh;
+    position: relative;
 }
 
 header{
@@ -96,7 +97,6 @@ input{
     -moz-appearance: textfield;
     padding: 0 1em;
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -189,8 +189,19 @@ input::-webkit-inner-spin-button {
     transform: scale(0.95);
 }
 
+@media(max-width: 990px){
+    header{
+        margin-top: 2em;
+    }
+    header img{
+        transform: scale(1.2);
+    }
+}
 
 @media(min-width: 990px){
+    header{
+        margin: 0;
+    }
     .calc{
         display: flex;
         gap: 1em;
@@ -209,7 +220,7 @@ input::-webkit-inner-spin-button {
     font-size: 11px; 
     text-align: center; 
     left: 0;
-    bottom: 0;
+    bottom: -1em;
 }
 .attribution a{ 
     color: hsl(228, 45%, 44%); 
