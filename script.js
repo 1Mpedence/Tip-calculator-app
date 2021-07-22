@@ -42,7 +42,7 @@ custom.addEventListener("input", ()=>{
 })
 
 amount.addEventListener("input", ()=>{
-    amt = amount.value;
+    amt = Number(amount.value);
     if(amt <= 0 && amt != ""){
         amount.classList.add("error");
         amtErr.style.visibility = "visible";
@@ -81,9 +81,9 @@ function rst(){
 
 function calc(){
     if(amt >= 0 && ppl >= 1){
-        console.log(tip);
-        let totalAmt = amt*(1 + (tip)/(100));
-        perPerson.innerHTML = `$${((totalAmt)/(ppl)).toFixed(2)}`;
-        total.innerHTML = `$${totalAmt.toFixed(2)}`;
+        let totalTip = (tip*amt)/(100);
+        let totalAmt = amt + totalTip;
+        perPerson.innerHTML = `$${((totalTip)/(ppl)).toFixed(2)}`;
+        total.innerHTML = `$${((totalAmt)/(ppl)).toFixed(2)}`;
     }
 }
